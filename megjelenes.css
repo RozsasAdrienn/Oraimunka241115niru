@@ -1,0 +1,63 @@
+#fotartalom{
+    grid-area: fo;
+    border: double 2px black;
+    border-top-width: 0px;
+}
+
+#baltartalom{
+    grid-area: ba;
+}
+
+#jobbtartalom{
+    grid-area: jo;
+}
+
+#bejelentkezes
+{
+    grid-area: be;
+}
+
+nav{
+    grid-area: me;
+}
+
+footer{
+    grid-area: os;
+}
+
+#keszitette{
+    grid-area: ke;
+    border-top: dashed black 1px;
+}
+
+#elerhetoseg{
+    grid-area: el;
+    border: 1px black solid;
+}
+
+main{
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;*/
+    grid-template-areas:
+    'me me fo be be'
+    'me me fo ba jo'
+    'ke os el el el'
+    ;
+}
+
+#bejelentkezes, #fotartalom{
+    text-align: center;
+}
+
+#jobbtartalom, footer{
+    text-align: right;
+}
+
+main>*{
+    /*két parancsból*/
+    padding-left: 10px;
+    padding-right: 10px;
+    /*egy parancsból*/
+    padding: auto 10px;
+}
